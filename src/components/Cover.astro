@@ -1,7 +1,18 @@
-<section>
-  <div>
-    <h1 class="text-5xl text-light-green-700">Bem-vindo à <br /> GDStudio</h1>
+---
+import { Image } from "@astrojs/image/components"
+
+import mixingDesk from "@assets/mixing-desk.jpg"
+---
+
+<section class="px-6 flex flex-col md:flex-row mt-28 md:space-x-10 md:justify-center">
+  <div class="space-y-2 mb-4">
+    <h1 class="text-5xl font-bold dark:text-white text-light-green-700">Bem-vindo à <br /> GDStudio</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
-  <img src="" alt="">
+  <Image
+    class="rounded-3xl"
+    src={mixingDesk}
+    alt="alternative text"
+    width={600}
+  />
 </section>

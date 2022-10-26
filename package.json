@@ -11,11 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/image": "^0.11.0",
     "@astrojs/tailwind": "^2.1.1",
     "@fontsource/inter": "^4.5.14",
+    "@fontsource/roboto-serif": "^4.5.10",
     "@tailwindcss/typography": "^0.5.7",
     "astro": "^1.5.2",
     "flowbite": "^1.5.3",
+    "sharp": "^0.31.1",
     "tailwindcss": "^3.2.1"
   }
 }
