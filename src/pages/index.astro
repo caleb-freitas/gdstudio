@@ -1,14 +1,18 @@
 ---
 import About from "@components/About.astro"
+import Contact from "@components/Contact.astro"
 import Cover from "@components/Cover.astro"
+import Footer from "@components/Footer.astro"
+import Home from "@components/Home.astro"
 import ScrollDown from "@components/ScrollDown.astro"
+import Services from "@components/Services.astro"
 import PageLayout from "@layouts/PageLayout.astro"
 ---
 
 <PageLayout title="GDStudio" class="">
-  <div class="flex flex-col items-center gap-y-10 h-screen">
-    <Cover />
-    <ScrollDown />
-  </div>
+  <Home />
   <About />
+  <Services />
+  <Contact />
+  <Footer />
 </PageLayout>
