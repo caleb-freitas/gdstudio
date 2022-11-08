@@ -1,46 +1,46 @@
 ---
 import "@fontsource/roboto-serif"
 
-import Header from '@components/Header.astro';
-import UserThemeScript from '@components/utils/UserThemeScript.astro';
-import ToggleThemeScript from '@components/utils/ToggleThemeScript.astro';
+import Header from "@components/Header.astro"
+import UserThemeScript from "@components/utils/UserThemeScript.astro"
+import ToggleThemeScript from "@components/utils/ToggleThemeScript.astro"
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
 
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		
-		<title>{title}</title>
-		
-		<!--flowbite setup-->
-		<link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
-		<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <title>{title}</title>
 
-		<!--theme switcher scripts-->
-		<UserThemeScript />
-		<ToggleThemeScript />
+    <!--flowbite setup-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
-	</head>
-	<body class="bg-light-gray-300 dark:bg-dark-gray-900 dark:text-zinc-200">
-		<Header />
-		<slot />
-	</body>
+    <!--theme switcher scripts-->
+    <UserThemeScript />
+    <ToggleThemeScript />
+  </head>
+  <body class="bg-light-gray-300 dark:bg-dark-gray-900 dark:text-zinc-200">
+    <Header />
+    <slot />
+    <style is:global>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: "Roboto Serif", serif;
+      }
+    </style>
+  </body>
 </html>
-
-<style is:global>
-	* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-	html {
-		font-family: "Roboto Serif", serif;
-	}
-</style>
