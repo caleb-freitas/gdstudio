@@ -1,4 +1,3 @@
-import audioMixing from "@assets/services/audio-mixing.jpg";
 import guitarClass from "@assets/services/guitar-class.jpg";
 import type { Props as Service } from "@components/landing-page/services/card.astro";
 
@@ -6,7 +5,7 @@ const services: Service[] = [
   {
     title: "Produção musical",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
+      "Arranjo, gravação, mixagem e masterização para trabalhos autorais e covers.",
     url: "#",
     alt: "alt",
     image: guitarClass,
@@ -14,7 +13,7 @@ const services: Service[] = [
   {
     title: "Gravação online",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
+      "Gravação de guitarra e violão online, receba o instrumento gravado já no jeito para sua produção.",
     url: "#",
     alt: "alt",
     image: guitarClass,
@@ -22,7 +21,7 @@ const services: Service[] = [
   {
     title: "Aulas de violão e guitarra",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
+      "Aulas de guitarra e violão, do iniciante ao avançado, desde a técnica e o repertório a dicas de estrada e vivência profissional musical.",
     url: "#",
     alt: "alt",
     image: guitarClass,
@@ -30,7 +29,7 @@ const services: Service[] = [
   {
     title: "Consultoria de timbre",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
+      "Timbragem para amplificadores, pedaleiras; setup de pedais e sistemas híbridos.",
     url: "#",
     alt: "alt",
     image: guitarClass,
@@ -38,7 +37,15 @@ const services: Service[] = [
   {
     title: "Locução",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
+      "Locuções para porta de loja, carro de som e rádio, com ou sem vinheta personalizada.",
+    url: "#",
+    alt: "alt",
+    image: guitarClass,
+  },
+  {
+    title: "Banda Prestun",
+    description:
+      "Banda para eventos de formaturas, casamentos, bailes, e eventos particulares e empresariais.",
     url: "#",
     alt: "alt",
     image: guitarClass,
