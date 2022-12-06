@@ -1,14 +1,16 @@
 ---
 import ServiceCard from "@components/landing-page/services/card.astro";
-import services from "@components/landing-page/services/types"
+import services from "@components/landing-page/services/types";
 ---
 
 <div class="px-20 pb-4">
   <h2 class="text-black dark:text-white font-bold text-4xl pb-4">Serviços</h2>
-  <div class="grid gap-4 justify-between grid-flow-col grid-col-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 md:gap-x-4 md:gap-y-10 lg:grid-cols-3 lg:grid-rows-2 lg:gap-x-4 lg:gap-y-10">
+  <div
+    class="grid gap-4 justify-between grid-flow-col grid-col-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 md:gap-x-4 md:gap-y-10 lg:grid-cols-3 lg:grid-rows-2 lg:gap-x-4 lg:gap-y-10"
+  >
     {
-      services.map(service => {
-        const { title, description, url, image, alt } = service
+      services.map((service) => {
+        const { title, description, url, image, alt } = service;
         return (
           <ServiceCard
             title={title}
@@ -17,7 +19,7 @@ import services from "@components/landing-page/services/types"
             image={image}
             alt={alt}
           />
-        )
+        );
       })
     }
   </div>

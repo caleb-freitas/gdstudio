@@ -1,24 +1,27 @@
 ---
-import { Image } from "@astrojs/image/components"
+import { Image } from "@astrojs/image/components";
 
 export interface Props {
   title: string;
   description: string;
   url: string;
-  alt: string
+  alt: string;
   image: ImageMetadata;
 }
 const { title, description, url, image, alt } = Astro.props;
 ---
 
-<a href={url} class="bg-white border border-gray-400 dark:border-gray-600 rounded-lg dark:bg-gray-800">
-  <Image
-    class="rounded-t-lg"
-    src={image}
-    alt={alt}
-  />
+<a
+  href={url}
+  class="bg-white border border-gray-400 dark:border-gray-600 rounded-lg dark:bg-gray-800"
+>
+  <Image class="rounded-t-lg" src={image} alt={alt} />
   <div class="p-4">
-    <h3 class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">{title}</h3>
+    <h3
+      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white"
+    >
+      {title}
+    </h3>
     <p class="mb-3 font-normal text-gray-700 dark:text-white">{description}</p>
   </div>
 </a>

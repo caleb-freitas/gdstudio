@@ -1,26 +1,32 @@
 ---
-import { Image } from "@astrojs/image/components"
-import mixingDesk from "@assets/mixing-desk.jpg"
+import { Image } from "@astrojs/image/components";
+import mixingDesk from "@assets/mixing-desk.jpg";
 ---
 
-<div class="flex flex-col items-center gap-y-10 h-screen">
-  <div
-  class="px-20 grid grid-flow-col grid-cols-2 md:flex-row mt-28 md:space-x-10 justify-center align-items-center">
-    <div class="">
-      <h1
-        class="leading-tight text-6xl font-bold text-black dark:text-white pb-4"
-      >
-        Bem-vindo à <br /> GDStudio
-      </h1>
-      <p class="leading-loose opacity-90 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <p class="leading-loose opacity-90 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi perferendis assumenda repellat cumque tempora corporis magni aut a alias quos, facilis aperiam, ipsa quas nobis quam aspernatur architecto qui!</p>
-      <p class="leading-loose opacity-90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi perferendis assumenda repellat cumque tempora corporis magni aut a alias quos, facilis aperiam, ipsa quas nobis quam aspernatur architecto qui!</p>
-    </div>
-    <Image
-      class="rounded-3xl"
-      src={mixingDesk}
-      alt="alternative text"
-      width={600}
-    />
+<div
+  class="mt-28 md:px-8 lg:px-20 grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-screen px-3"
+>
+  <div class="max-w-2xl">
+    <h1 class="text-6xl font-bold text-black dark:text-white pb-4">
+      Bem-vindo à <br /> GDStudio
+    </h1>
+    <p class="leading-relaxed opacity-90 pb-2">
+      Escritor: não somente uma certa maneira especial de ver as coisas, senão
+      também uma impossibilidade de as ver de qualquer outra maneira.
+    </p>
+    <p class="leading-relaxed opacity-90 pb-2">
+      Hoje quando acordei, procurei-te numa ânsia ardente, mas em vão. Deixaste
+      em meu corpo e no lençol provas irrefutáveis do que entre nós ocorreu
+      durante a noite. Esta noite recolho-me mais cedo, para na mesma cama, te
+      esperar.
+    </p>
+    <p class="leading-relaxed opacity-90">
+      Quando chegares, quero te agarrar com avidez e força. Quero te apertar com
+      todas as forças de minhas mãos. Só descansarei quando vir sair o sangue
+      quente do seu corpo. Só assim, livrar-me-ei de ti, pernilongo filho da...
+    </p>
+  </div>
+  <div>
+    <Image class="rounded-3xl" src={mixingDesk} alt="alternative text" />
   </div>
 </div>
