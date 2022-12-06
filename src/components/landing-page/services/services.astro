@@ -1,46 +1,6 @@
 ---
-import mixingService from "@assets/ServiceMixing.jpg"
-import guitarClassService from "@assets/GuitarClassService.jpg"
 import ServiceCard from "@components/landing-page/services/card.astro";
-import type { Props as Service } from "@components/landing-page/services/card.astro"
-
-const services: Service[] = [
-  {
-    title: "Produção musical",
-    description: "Descrição",
-    url: "#",
-    alt: "alt",
-    image: mixingService
-  },
-  {
-    title: "Gravação online",
-    description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-    url: "#",
-    alt: "alt",
-    image: guitarClassService
-  },
-  {
-    title: "Aulas de violão e guitarra",
-    description: "Descrição",
-    url: "#",
-    alt: "alt",
-    image: mixingService
-  },
-  {
-    title: "Consultoria de timbre",
-    description: "Descrição",
-    url: "#",
-    alt: "alt",
-    image: mixingService
-  },
-  {
-    title: "Locução",
-    description: "Descrição",
-    url: "#",
-    alt: "alt",
-    image: mixingService
-  },
-]
+import services from "@components/landing-page/services/types"
 ---
 
 <div class="px-20 pb-4">
