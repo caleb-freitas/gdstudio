@@ -1,0 +1,24 @@
+---
+import { Image } from "@astrojs/image/components"
+import mixingDesk from "@assets/mixing-desk.jpg"
+---
+
+<div class="flex flex-col items-center gap-y-10 h-screen">
+  <div
+  class="px-6 flex flex-col md:flex-row mt-28 md:space-x-10 justify-center align-items-center">
+    <div class="space-y-2">
+      <h1
+        class="leading-tight text-5xl font-bold dark:text-white text-light-green-700"
+      >
+        Bem-vindo à <br /> GDStudio
+      </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <Image
+      class="rounded-3xl"
+      src={mixingDesk}
+      alt="alternative text"
+      width={600}
+    />
+  </div>
+</div>

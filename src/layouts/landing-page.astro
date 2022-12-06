@@ -1,9 +1,7 @@
 ---
 import "@fontsource/roboto-serif"
-
-import Header from "@components/Header.astro"
-import UserThemeScript from "@utils/UserThemeScript.astro"
-import ToggleThemeScript from "@utils/ToggleThemeScript.astro"
+import Header from "@components/landing-page/header.astro"
+import ToggleThemeScript from "@components/landing-page/navigation/theme-toggle-script.astro"
 
 const { title } = Astro.props
 ---
@@ -26,7 +24,18 @@ const { title } = Astro.props
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
     <!--theme switcher scripts-->
-    <UserThemeScript />
+    <script is:inline>
+      // on page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark")
+      } else {
+        document.documentElement.classList.remove("dark")
+      }
+    </script>
     <ToggleThemeScript />
   </head>
   <body class="bg-light-gray-300 dark:bg-dark-gray-900 dark:text-zinc-200">

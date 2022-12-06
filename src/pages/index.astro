@@ -1,17 +1,12 @@
 ---
-import About from "@components/About.astro"
-import Contact from "@components/Contact.astro"
-import Cover from "@components/Cover.astro"
-import Footer from "@components/Footer.astro"
-import Home from "@components/Home.astro"
-import Services from "@components/Services.astro"
-import PageLayout from "@layouts/PageLayout.astro"
+import LandingPage from "@layouts/landing-page.astro"
+import Services from "@components/landing-page/services/services.astro"
+import Banner from "@components/landing-page/banner.astro"
 ---
 
-<PageLayout title="GDStudio">
-  <Home />
-  <!-- <About /> -->
-  <Services />
-  <!-- <Contact /> -->
-  <!-- <Footer /> -->
-</PageLayout>
+<LandingPage title="GDStudio">
+  <main>
+    <Banner />
+    <Services />
+  </main>
+</LandingPage>
