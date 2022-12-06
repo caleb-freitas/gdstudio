@@ -1,1 +1,64 @@
-<h2 id="services">Services</h2>
+---
+import mixingService from "@assets/ServiceMixing.jpg"
+import guitarClassService from "@assets/GuitarClassService.jpg"
+import ServiceCard from "@components/ServiceCard.astro";
+import type { Props as Service } from "@components/ServiceCard.astro"
+
+const services: Service[] = [
+  {
+    title: "Produção musical",
+    description: "Descrição",
+    url: "#",
+    alt: "alt",
+    image: mixingService
+  },
+  {
+    title: "Gravação online",
+    description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    url: "#",
+    alt: "alt",
+    image: guitarClassService
+  },
+  {
+    title: "Aulas de violão e guitarra",
+    description: "Descrição",
+    url: "#",
+    alt: "alt",
+    image: mixingService
+  },
+  {
+    title: "Consultoria de timbre",
+    description: "Descrição",
+    url: "#",
+    alt: "alt",
+    image: mixingService
+  },
+  {
+    title: "Locução",
+    description: "Descrição",
+    url: "#",
+    alt: "alt",
+    image: mixingService
+  },
+]
+---
+
+<div class="px-20 pb-4">
+  <h2 class="text-dark-gray-900 dark:text-light-gray-300 font-bold text-4xl pb-4">Serviços</h2>
+  <div class="grid gap-4 justify-between grid-flow-col grid-col-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 md:gap-x-4 md:gap-y-10 lg:grid-cols-3 lg:grid-rows-2 lg:gap-x-4 lg:gap-y-10">
+    {
+      services.map(service => {
+        const { title, description, url, image, alt } = service
+        return (
+          <ServiceCard
+            title={title}
+            description={description}
+            url={url}
+            image={image}
+            alt={alt}
+          />
+        )
+      })
+    }
+  </div>
+</div>
