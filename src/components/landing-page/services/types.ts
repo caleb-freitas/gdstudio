@@ -5,38 +5,38 @@ import type { Props as Service } from "@components/landing-page/services/card.as
 const services: Service[] = [
   {
     title: "Produção musical",
-    description: "Descrição",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
     url: "#",
     alt: "alt",
-    image: audioMixing
+    image: guitarClass
   },
   {
     title: "Gravação online",
-    description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
     url: "#",
     alt: "alt",
     image: guitarClass
   },
   {
     title: "Aulas de violão e guitarra",
-    description: "Descrição",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
     url: "#",
     alt: "alt",
-    image: audioMixing
+    image: guitarClass
   },
   {
     title: "Consultoria de timbre",
-    description: "Descrição",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
     url: "#",
     alt: "alt",
-    image: audioMixing
+    image: guitarClass
   },
   {
     title: "Locução",
-    description: "Descrição",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
     url: "#",
     alt: "alt",
-    image: audioMixing
+    image: guitarClass
   },
 ]
 
