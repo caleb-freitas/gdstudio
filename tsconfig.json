@@ -7,7 +7,6 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
-      "@utils/*": ["src/utils/*"]
     }
   }
 }
