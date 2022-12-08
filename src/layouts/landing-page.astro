@@ -1,31 +1,18 @@
 ---
+import "../styles/base.css"
 import "@fontsource/roboto-serif";
 import Header from "@components/landing-page/header.astro";
 import ToggleThemeScript from "@components/landing-page/navigation/theme-toggle-script.astro";
-
+import HeadCommon from "@components/head-common.astro";
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-
+    <HeadCommon />
     <title>{title}</title>
-
-    <!--flowbite setup-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
-    />
-    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
-
-    <!--theme switcher scripts-->
     <script is:inline>
-      // on page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -38,37 +25,10 @@ const { title } = Astro.props;
     </script>
     <ToggleThemeScript />
   </head>
-  <body class="bg-gray-50 text-black dark:bg-zinc-900 dark:text-white">
+  <body> 
     <Header />
-    <slot />
-    <style is:global>
-      :root {
-        line-height: 140%;
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-text-size-adjust: 100%;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        font-family: "Roboto Serif", serif;
-        scroll-behavior: smooth;
-      }
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      body::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Hide scrollbar for IE, Edge and Firefox */
-      body {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-      }
-    </style>
+    <main>
+      <slot />
+    </main>
   </body>
 </html>

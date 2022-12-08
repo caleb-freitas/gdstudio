@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
@@ -9,9 +9,11 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    tailwind(),
+    tailwind({
+      config: { applyBaseStyles: false },
+    }),
     image({
-      serviceEntryPoint: '@astrojs/image/sharp'
-    })
-  ]
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+  ],
 });
